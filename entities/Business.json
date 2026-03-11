@@ -1,0 +1,58 @@
+{
+  "name": "Business",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Business name"
+    },
+    "category": {
+      "type": "string",
+      "description": "Type of service (restaurant, dental, retail, etc.)"
+    },
+    "address": {
+      "type": "string",
+      "description": "Business address"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number"
+    },
+    "website": {
+      "type": "string",
+      "description": "Website URL"
+    },
+    "location": {
+      "type": "string",
+      "description": "City/area searched"
+    },
+    "pe_ownership_status": {
+      "type": "string",
+      "enum": [
+        "independent",
+        "pe_owned",
+        "unsure"
+      ],
+      "description": "Private equity ownership status with higher accuracy"
+    },
+    "verification_snippet": {
+      "type": "string",
+      "description": "AI-generated proof snippet about ownership status"
+    },
+    "rating": {
+      "type": "number",
+      "description": "Business rating if available"
+    },
+    "is_saved": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether user saved this business"
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "location",
+    "pe_ownership_status"
+  ]
+}
